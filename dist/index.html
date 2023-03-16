@@ -168,8 +168,50 @@
 	<div class="partners__bg ibg"><img src="img/BG/BG2.jpg" alt=""></div>
 </div>
 		<div class="contact">
-	<div class="contact__cpntainer container">
+	<div class="contact__container container">
 		<div class="contact__title title">Contact</div>
+		<div class="contact__content">
+			<div class="contact__inputdata contact__item inputdata">
+				<form method="post" class="form__body goto-error" action="#">
+					<div class="inputdata__row">
+						<div class="inputdata__small small">
+							<div class="small__column">
+								<div class="small__item">
+									<label for="name" class="small__label label">Your Name</label>
+									<input id='name' type="text" data-validate data-value="" data-error="не введено имя"
+										autocomplete="off" name="name" class="input req">
+								</div>
+								<div class="small__item">
+									<label for="email" class="small__label label">Your E-mail</label>
+									<input id="email" type="text" data-validate data-value="" data-error="не указан email"
+										autocomplete="off" name="email" class="input email req">
+								</div>
+							</div>
+						</div>
+						<div class="inputdata__big big">
+							<label for="teatarea" class="small__label label">Your message</label>
+							<textarea id="teatarea" type="text" data-validate data-value="" data-error="не заполнено поле"
+								autocomplete="off" name="textarea" class="textarea req"></textarea>
+						</div>
+						<button type="submit" class="inputdata__btn btn btn_s"><span>SEND</span></button>
+					</div>
+				</form>
+			</div>
+			<div class="contact__textContent contact__item textContent">
+				<div class="textContent__rest">
+					<div class="textContent__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
+						perferendis
+						rerum delectus aut iste sit, aspernatur adipisci velit!</div>
+					<div class="textContent__name">Lorem, ipsum</div>
+					<div class="textContent__social">
+						<a href=""><img src="img/item/F.png" alt=""></a>
+						<a href=""><img src="img/item/in.png" alt=""></a>
+					</div>
+					<a href="mailto:e-mail:sad.asdasdad@gmail.com"
+						class="textContent__email">e-mail:sad.asdasdad@gmail.com</a>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 	</div>
