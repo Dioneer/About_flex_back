@@ -76,7 +76,8 @@
 		</div>
 		<div class="about__mainText mainText">
 			<div class="mainText__title title">ABOUT</div>
-			<div class="mainText__text text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, labore soluta
+			<div class="mainText__text simpletext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, labore
+				soluta
 				quas
 				beatae ratione sed aliquam atque, libero a assumenda aliquid similique aspernatur! Dolor, et? Blanditiis,
 				molestiae natus nisi vel iste harum aperiam voluptate ipsam optio, deleniti ex repudiandae necessitatibus.
@@ -120,31 +121,31 @@
 		<div class="portfolio__title title">Portfolio</div>
 		<nav class="portfolio__menu">
 			<ul class="portfolio__list">
+				<li data-filter='all' class="portfolio__link active">all</li>
 				<li data-filter='web' class="portfolio__link">Web</li>
 				<li data-filter='apps' class="portfolio__link">apps</li>
 				<li data-filter='others' class="portfolio__link">others</li>
-				<li data-filter='all' class="portfolio__link">all</li>
 			</ul>
 		</nav>
 		<div class="portfolio__row">
-			<div class="portfolio__column">
-				<div class="portfolio__item web">
-					<div class="portfolio__image"><img src="img/item/block.png" alt=""></div>
+			<div data-gallery class="portfolio__column">
+				<div data-src="img/item/block.png" class="portfolio__item web">
+					<a href='' class="portfolio__image"><img src="img/item/block.png" alt=""></a>
 				</div>
-				<div class="portfolio__item web">
-					<div class="portfolio__image"><img src="img/item/block.png" alt=""></div>
+				<div data-src="img/item/block.png" class="portfolio__item web">
+					<a href='' class="portfolio__image"><img src="img/item/block.png" alt=""></a>
 				</div>
-				<div class="portfolio__item apps">
-					<div class="portfolio__image"><img src="img/item/block.png" alt=""></div>
+				<div data-src="img/item/block.png" class="portfolio__item apps">
+					<a href='' class="portfolio__image"><img src="img/item/block.png" alt=""></a>
 				</div>
-				<div class="portfolio__item apps">
-					<div class="portfolio__image"><img src="img/item/block.png" alt=""></div>
+				<div data-src="img/item/block.png" class="portfolio__item apps">
+					<a href='' class="portfolio__image"><img src="img/item/block.png" alt=""></a>
 				</div>
-				<div class="portfolio__item others">
-					<div class="portfolio__image"><img src="img/item/block.png" alt=""></div>
+				<div data-src="img/item/block.png" class="portfolio__item others">
+					<a href='' class="portfolio__image"><img src="img/item/block.png" alt=""></a>
 				</div>
-				<div class="portfolio__item others">
-					<div class="portfolio__image"><img src="img/item/block.png" alt=""></div>
+				<div data-src="img/item/block.png" class="portfolio__item others">
+					<a href='' class="portfolio__image"><img src="img/item/block.png" alt=""></a>
 				</div>
 			</div>
 		</div>
@@ -171,7 +172,7 @@
 	<div class="contact__container container">
 		<div class="contact__title title">Contact</div>
 		<div class="contact__content">
-			<div class="contact__inputdata contact__item inputdata">
+			<div class="contact__item inputdata">
 				<form method="post" class="form__body goto-error" action="#">
 					<div class="inputdata__row">
 						<div class="inputdata__small small">
@@ -197,7 +198,7 @@
 					</div>
 				</form>
 			</div>
-			<div class="contact__textContent contact__item textContent">
+			<div class="contact__item contact__item_start textContent">
 				<div class="textContent__rest">
 					<div class="textContent__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
 						perferendis
@@ -214,6 +215,33 @@
 		</div>
 	</div>
 </div>
+<div class="popup">
+	<div class="popup__body">
+		<div class="popup__content">
+			<a href="#" class="popup__close"></a>
+			<div class="popup__title">Lorem, ipsum dolor. 1</div>
+			<div class="popup__text">Fill the required fields</div>
+		</div>
+	</div>
+</div>
+		<footer class="footer">
+	<div class="footer__container container">
+		<div class="footer__body">
+			<div class="footer__logo"><img src="img/item/Logofooter.png" alt=""></div>
+			<div class="footer__links links">
+				<nav class="links__row">
+					<ul class="links__list">
+						<li><a href="" class="links__links">Home</a></li>
+						<li><a href="" class="links__links">Facebook</a></li>
+						<li><a href="" class="links__links">Linkedin</a></li>
+						<li><a href="" class="links__links">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="footer__rights">Lorem ipsum dolor sit amet.</div>
+		</div>
+	</div>
+</footer>
 	</div>
 	<script src="js/app.min.js"></script>
 </body>
