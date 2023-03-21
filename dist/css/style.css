@@ -681,7 +681,7 @@ html.touch .header__link:hover {
 
 .portfolio {
   padding: 50px 0px;
-  background: rgb(202, 199, 199);
+  background: #f3f3f3;
 }
 .portfolio__container {
   text-align: center;
@@ -695,6 +695,7 @@ html.touch .header__link:hover {
 .portfolio__list {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .portfolio__list li {
   margin: 0px 20px 0px 0px;
@@ -704,9 +705,10 @@ html.touch .header__link:hover {
 }
 .portfolio__link {
   text-transform: uppercase;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   letter-spacing: 0.2625rem;
   color: #333;
+  font-weight: 700;
 }
 .portfolio__link.active {
   color: #ada074;
@@ -719,16 +721,20 @@ html.touch .header__link:hover {
 }
 @media (min-width: 767.98px) {
   .portfolio__column {
-    flex: 1 0 100%;
+    flex: 0 1 100%;
     display: flex;
     margin: 0px -10px;
     flex-wrap: wrap;
   }
 }
 .portfolio__item {
-  flex: 1 0 50%;
-  padding: 0px 10px;
   margin: 0px 0px 10px 0px;
+}
+@media (min-width: 767.98px) {
+  .portfolio__item {
+    flex: 0 1 50%;
+    padding: 0px 10px;
+  }
 }
 .portfolio__image {
   display: block;
@@ -780,11 +786,16 @@ html.touch .header__link:hover {
   color: #fff;
   margin: 0px 0px 5% 0px;
 }
+@media (max-width: 767.98px) {
+  .partners__title {
+    font-size: 1.5625rem;
+  }
+}
 .partners__row {
   display: flex;
 }
 .partners__column {
-  flex: 1 0 100%;
+  flex: 1 1 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1002,7 +1013,7 @@ html.touch .header__link:hover {
 
 .form__body:after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -1014,6 +1025,7 @@ html.touch .header__link:hover {
 .form__body.sending:after {
   opacity: 1;
   visibility: visible;
+  overflow: hidden;
 }
 
 .popup {
@@ -1027,6 +1039,7 @@ html.touch .header__link:hover {
   opacity: 0;
   overflow-y: auto;
   overflow-x: hidden;
+  z-index: 50;
   -webkit-transition: all 1s ease 0s;
   -moz-transition: all 1s ease 0s;
   -ms-transition: all 1s ease 0s;
@@ -1134,6 +1147,13 @@ html.touch .header__link:hover {
 
 html.popup-show {
   overflow: hidden;
+}
+
+body.lock {
+  overflow: hidden;
+}
+body.lock .contact {
+  pointer-events: none;
 }
 
 .footer {
@@ -1712,7 +1732,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   right: 0;
   bottom: 0;
   z-index: 1040;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
   will-change: auto;
   -webkit-transition: opacity 333ms ease-in 0s;
