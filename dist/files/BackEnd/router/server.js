@@ -1,5 +1,6 @@
 import http from 'http'
 import EventEmitter from 'events'
+import { parserMultyForm } from './middleware.js'
 
 export class Application {
 	constructor() {
@@ -29,21 +30,12 @@ export class Application {
 	}
 	_createServer() {
 		return http.createServer((req, res) => {
-			let body = "";
-			req.on('data', (chunk) => {
-				body += chunk;
-			})
-			req.on('end', () => {
-				if (body) {
-					req.body = JSON.parse(body);
-				}
-				this.middlewares.forEach((middleware) => { middleware(req, res) })
-				const emitted = this.emitter.emit(this._getRouterMask(req.pathname, req.method), req, res)
-				if (!emitted) {
-					res.writeHead(404);
-					res.end('file not find')
-				}
-			})
+			this.middlewares.forEach((middleware) => { middleware(req, res) })
+			const emitted = this.emitter.emit(this._getRouterMask(req.pathname, req.method), req, res)
+			if (!emitted) {
+				res.writeHead(404);
+				res.end('file not find')
+			}
 		})
 	}
 	_getRouterMask(path, method) {
