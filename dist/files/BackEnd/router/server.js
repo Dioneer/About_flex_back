@@ -1,6 +1,5 @@
 import http from 'http'
 import EventEmitter from 'events'
-import { parserMultyForm } from './middleware.js'
 
 export class Application {
 	constructor() {
