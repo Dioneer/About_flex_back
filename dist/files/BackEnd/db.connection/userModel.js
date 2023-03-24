@@ -18,7 +18,7 @@ export const tableInint = db.define("AboutUserData", {
 		allowNull: false,
 		uniqe: true
 	},
-	massage: {
+	message: {
 		type: DataTypes.STRING(10000),
 		allowNull: false,
 	},

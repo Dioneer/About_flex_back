@@ -9,8 +9,8 @@ dotenv.config()
 const app = new Application();
 
 app.addRouter(router);
-app.use(parserJSON);
 app.use(parserMultyForm);
+app.use(parserJSON);
 app.use(parserURL("http://localhost:5050"));
 app.listen(process.env.localhost_PORT, () => { console.log(`Work on port ${process.env.localhost_PORT}`) });
 
